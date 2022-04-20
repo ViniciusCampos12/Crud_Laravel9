@@ -10,6 +10,9 @@ use App\Providers\RouteServiceProvider;
 
 class AuthController extends Controller
 {
+    /**
+     * Injeta a middleware nos métodos para garantir que um usuário logado não possa acessa-los
+     */
     public function __construct()
     {
         $this->middleware('guest');
@@ -18,12 +21,24 @@ class AuthController extends Controller
     //const para redirecionar para rota home
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    /**
+     * Método responsável por redirecionar o usuário para tela de login do provider
+     *
+     * @param string $provider recebe qual provider o usuário vai logar
+     * @return void
+     */
     public function redirectToProvider($provider)
     {
         return Socialite::driver($provider)->redirect();
 
     }
 
+    /**
+     * Método responsável por recuperar os dados de um usuário no seu determinado provider
+     *
+     * @param string $provider recebe qual provider o usuário vai logar
+     * @return void
+     */
     public function handleProviderCallback($provider)
     {
        $userProvider = Socialite::driver($provider)->stateless()->user();
