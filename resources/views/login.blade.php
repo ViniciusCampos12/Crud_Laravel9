@@ -55,11 +55,23 @@
                                         <button type="submit" class="btn btn-primary">
                                             {{ __('Entrar') }}
                                         </button>
-                                        <button type="button" class="btn btn-success"
-                                            onclick=" location.href='{{ route('register') }}'">
-                                            {{ __('Criar nova conta') }}
+                                        <button type="button" class="btn btn-outline-dark"
+                                            onclick=" location.href='{{ route('redirect', ['provider' => 'github']) }}'">
+                                            <i class="fa fa-github" style="font-size:15px"> </i>
+                                            {{ __('Login com GitHub') }}
+                                        </button>
+                                        <button type="button" class="btn btn-outline-danger"
+                                            onclick=" location.href='{{ route('redirect', ['provider' => 'google']) }}'"><img width="15px" style="margin-bottom:3px; margin-right:5px" alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                            {{ __('Login com Google') }}
                                         </button>
                                     </div>
+
+                                    <br><br>
+                                    <button type="button" class="btn btn-outline-success"
+                                        onclick=" location.href='{{ route('register') }}'">
+                                        {{ __('Criar nova conta') }}
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>

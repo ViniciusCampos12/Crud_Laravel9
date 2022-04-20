@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +42,9 @@ Route::fallback(function(){
     return redirect()->back();
 });
 
+
+Route::middleware('guest')
+    ->get('/auth/redirect/{provider}', [AuthController::class,'redirectToProvider'])->name('redirect');
+
+Route::middleware('guest')
+    ->get('/auth/callback/{provider}', [AuthController::class,'handleProviderCallback'])->name('callback.provider');
