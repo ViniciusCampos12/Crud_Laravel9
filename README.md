@@ -69,10 +69,10 @@ a este produto uma tag onde também é possivel cadastrar,deletar,atualizar e vi
 </br>
 <hr>
 
-<h1>Tela após usuário efetuar login</h1>
+<h1>Index</h1>
 <br>
 <p>Nessa tela o usuário tem acesso ao index do site</p>
-<div align="center"><img src="https://user-images.githubusercontent.com/85213186/161105400-cd515292-e3f1-42cb-8a2e-60aa830829a2.png"/></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/85213186/164360304-eb86e0b7-d6dd-4fdd-9677-9dff0c74ead6.png"/></div>
 </br>
 </br>
 <hr>
@@ -80,15 +80,7 @@ a este produto uma tag onde também é possivel cadastrar,deletar,atualizar e vi
 <h1>Tela cadastro de produtos</h1>
 <br>
 <p>Nessa tela é possivel usuário registrar um novo produto e sua determinada tag</p>
-<div align="center"><img src="https://user-images.githubusercontent.com/85213186/161105431-70e8ad42-9cc1-4336-ae22-06ad11387d8f.png"/></div>
-</br>
-</br>
-<hr>
-
-<h1>Tela após registro</h1>
-<br>
-<p>Aqui um exemplo de como fica, após um usuário inserir um produto com sua respectiva tag</p>
-<div align="center"><img src="https://user-images.githubusercontent.com/85213186/161105472-768df24d-a954-46bf-be79-659758db9b2b.png"/></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/85213186/164360513-db63124c-be19-4e43-86cb-fcfadfd46c24.png"/></div>
 </br>
 </br>
 <hr>
@@ -97,7 +89,7 @@ a este produto uma tag onde também é possivel cadastrar,deletar,atualizar e vi
 <h1>Tela cadastro de tags</h1>
 <br>
 <p>Nessa tela é possivel usuário cadastrar tags</p>
-<div align="center"><img src="https://user-images.githubusercontent.com/85213186/161105576-1d9296dd-ee4f-43aa-a493-55be220b1561.png"/></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/85213186/164360648-102db361-e17a-40fb-be94-15089c2459a6.png"/></div>
 </br>
 </br>
 <hr>
@@ -105,7 +97,7 @@ a este produto uma tag onde também é possivel cadastrar,deletar,atualizar e vi
 <h1>Tela lista de tags</h1>
 <br>
 <p>Nessa tela é possivel ver todas as tags, além de poder edita-lás ou atualiza-lás</p>
-<div align="center"><img src="https://user-images.githubusercontent.com/85213186/161105507-80cff2ee-150c-4ffa-96e0-42c299d585b5.png"/></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/85213186/164360962-ea5f06a7-63b2-45cd-8adb-ce68652ee663.png"/></div>
 </br>
 </br>
 <hr>
