@@ -22,9 +22,9 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="email" type="email"
+                                        <input type="email"
                                             class="form-control @error('email') is-invalid @enderror" name="email"
-                                            value="{{ old('email') }}" autofocus>
+                                            value="{{ old('email') }}">
 
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
@@ -39,7 +39,7 @@
                                         class="col-md-4 col-form-label text-md-end">{{ __('Senha') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="password" type="password"
+                                        <input type="password"
                                             class="form-control @error('password') is-invalid @enderror" name="password">
 
                                         @error('password')

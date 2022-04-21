@@ -47,6 +47,7 @@ class AuthController extends Controller
            'name'                            => $userProvider->getName(),
            'provider_id'                     => $userProvider->getId(),
            'email'                           => $userProvider->getEmail(),
+           'avatar'                          => $userProvider->getAvatar(),
            'provider'                        => $provider
        ]);
 
