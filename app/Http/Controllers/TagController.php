@@ -25,7 +25,7 @@ class TagController extends Controller
     public function index()
     {
        $tags = $this->tag->orderBy('id','ASC')->get();
-       return view('index_tag', compact('tags'));
+       return view('tags.index_tag', compact('tags'));
     }
 
     /**
@@ -35,7 +35,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        return view('form_tag');
+        return view('tags.form_tag');
     }
 
     /**
@@ -83,7 +83,7 @@ class TagController extends Controller
     public function edit($id)
     {
         $tags = $this->tag->find($id);
-        return view('update_tag',compact('tags'));
+        return view('tags.update_tag',compact('tags'));
     }
 
     /**
@@ -95,6 +95,13 @@ class TagController extends Controller
      */
     public function update(Request $request, $id)
     {
+         $request->validate([
+            'name' => 'required'
+        ],
+        [
+            'name.required' => 'Preencha o campo'
+        ]);
+
         $tags = $this->tag->find($id);
         $tags->fill($request->all());
         $tags->save();

@@ -7,7 +7,7 @@
 
 <h1 align="center">Atualizar Produto</h1>
 
-    @component('layouts._components.form',['product' => $product, 'tags' => $tags, 'option' => $option])
+    @component('layouts._components.form',['product' => $product, 'tags' => $tags, ])
 
     @endcomponent
 @endsection

@@ -11,12 +11,12 @@
                    @if(Auth::user()->avatar) <img style="border-radius: 50%; width: 6%;" src="{{ Auth::user()->avatar }}  alt="picture">  @endif
                         <figcaption><h5>Bem vindo, {{ Auth::user()->name }}</h5></figcaption>
                 </figure>
-        </div>
-            <div style="margin-bottom: 15px; text-align: right; padding: 5px; position:absolute; top:55px; right:55px;">
+
+            <div style="margin-bottom: 15px; text-align: right; position:absolute; top:5px; right:10px;">
                 <a href="{{ route('logout') }}" class="btn btn-lg btn-danger">
                     <span class="glyphicon glyphicon-log-out"></span> Log out </a>
             </div>
-
+            </div>
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>

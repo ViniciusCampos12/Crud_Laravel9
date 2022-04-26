@@ -39,7 +39,7 @@ class ProductController extends Controller
     public function create()
     {
         $tags = Tag::orderBy('id', 'ASC')->get();
-        return view('form_product',compact('tags'));
+        return view('products.form_product',compact('tags'));
 
     }
 
@@ -53,10 +53,12 @@ class ProductController extends Controller
     {
 
         $request->validate([
-            'name' => 'required'
+            'name'   => 'required',
+            'name'   => 'unique:products,name'
         ],
         [
-            'name.required' => 'Preencha o campo'
+            'name.required' => 'Preencha o campo',
+            'name.unique'   => 'O nome informado já existe'
         ]);
 
         $this->product->name = $request->name;
@@ -90,9 +92,8 @@ class ProductController extends Controller
 
         $product = $this->product->find($id);
         $tags = Tag::orderBy('id', 'ASC')->get();
-        $option = $this->product->find($id)->with('tags')->get();
 
-        return view('update_product',['product' => $product,'tags' => $tags, 'option'=> $option]);
+        return view('products.update_product',['product' => $product,'tags' => $tags, ]);
 
     }
 
@@ -105,12 +106,21 @@ class ProductController extends Controller
      */
     public function update(Request $request,$id)
     {
+
+        $request->validate([
+            'name' => 'required',
+            'name'   => 'unique:products,name'
+        ],
+        [
+            'name.required' => 'Preencha o campo',
+            'name.unique'   => 'O nome informado já existe'
+        ]);
+
         $product = $this->product->find($id);
         $product->fill($request->all());
         $product->save();
 
         DB::statement("DELETE from product_tag WHERE product_id = $id");
-        $product->find($id);
         $product->tags()->attach($request->get('tag'));
 
         return redirect()->route('produto.index');
