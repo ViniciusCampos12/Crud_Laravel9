@@ -54,11 +54,9 @@ class ProductController extends Controller
 
         $request->validate([
             'name'   => 'required',
-            'name'   => 'unique:products,name'
         ],
         [
             'name.required' => 'Preencha o campo',
-            'name.unique'   => 'O nome informado já existe'
         ]);
 
         $this->product->name = $request->name;
