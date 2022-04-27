@@ -54,9 +54,11 @@ class ProductController extends Controller
 
         $request->validate([
             'name'   => 'required',
+            'name'   => 'unique:products,name'
         ],
         [
             'name.required' => 'Preencha o campo',
+            'name.unique'   => 'O nome informado já existe'
         ]);
 
         $this->product->name = $request->name;
@@ -74,9 +76,11 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($id)
     {
-        //
+        $product = $this->product->find($id);
+
+        return view('products.show', compact('product'));
     }
 
     /**
@@ -107,11 +111,9 @@ class ProductController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'name'   => 'unique:products,name'
         ],
         [
             'name.required' => 'Preencha o campo',
-            'name.unique'   => 'O nome informado já existe'
         ]);
 
         $product = $this->product->find($id);

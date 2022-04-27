@@ -43,7 +43,9 @@
                                         location.href='{{ route('produto.edit', [$product->id]) }}'">Editar</button>
                                                      <button type=" submit" class="btn btn-danger "" onclick="
                                         location.href='{{ route('produto.destroy', [$product->id]) }}'">Deletar</button>
-    @endcomponent
+                                        <button type="button" class="btn btn-info "" onclick="
+                                        location.href='{{ route('produto.show', [$product->id]) }}'">Show</button>
+                                @endcomponent
                                     </td>
                                     </tr>
      @endforeach
