@@ -8,7 +8,7 @@
 
         <h1 align="center">Cadastro de Produtos</h1>
 
-        @component('layouts._components.form', ['tags' => $tags])
+        @component('layouts._components.form', ['tags' => $tags ])
 
         @endcomponent
 

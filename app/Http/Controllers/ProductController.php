@@ -38,7 +38,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $tags = Tag::orderBy('id', 'ASC')->get();
+        $tags = Tag::all();
         return view('products.form_product',compact('tags'));
 
     }
